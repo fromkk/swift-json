@@ -18,12 +18,12 @@ public class TAP {
         self.plan(tests)
     }
     /// sets the number of tests to run. call it before the first test
-    public func plan(tests:Int) {
+    public func plan(_ tests:Int) {
         self.tests = tests
         print("1..\(tests)")
     }
     /// ok if `predicate` is true
-    public func ok(@autoclosure predicate:()->Bool, _ message:String = "")->Bool {
+    public func ok(@autoclosure _ predicate:()->Bool, _ message:String = "")->Bool {
         let ok = predicate()
         runs.append(ok)
         let ornot = ok ? "" : "not "
@@ -31,42 +31,42 @@ public class TAP {
         return ok
     }
     /// ok if `actual` == `expected`
-    public func eq<T:Equatable>(actual:T?, _ expected:T?, _ message:String = "")->Bool {
+    public func eq<T:Equatable>(_ actual:T?, _ expected:T?, _ message:String = "")->Bool {
         if ok(actual == expected, message) { return true }
         print("#       got: \(actual)")
         print("#  expected: \(expected)")
         return false
     }
     /// ok if arrays are `actual` == `expected`
-    public func eq<T:Equatable>(actual:[T], _ expected:[T], _ message:String = "")->Bool {
+    public func eq<T:Equatable>(_ actual:[T], _ expected:[T], _ message:String = "")->Bool {
         if ok(actual == expected, message) { return true }
         print("#       got: \(actual)")
         print("#  expected: \(expected)")
         return false
     }
     /// ok if dictionaries are `actual` == `expected`
-    public func eq<K:Hashable,V:Equatable>(actual:[K:V], _ expected:[K:V], _ message:String = "")->Bool {
+    public func eq<K:Hashable,V:Equatable>(_ actual:[K:V], _ expected:[K:V], _ message:String = "")->Bool {
         if ok(actual == expected, message) { return true }
         print("#       got: \(actual)")
         print("#  expected: \(expected)")
         return false
     }
     /// ok if `actual` != `expected`
-    public func ne<T:Equatable>(actual:T?, _ expected:T?, _ message:String = "")->Bool {
+    public func ne<T:Equatable>(_ actual:T?, _ expected:T?, _ message:String = "")->Bool {
         if ok(actual != expected, message) { return true }
         print("#       got: \(actual)")
         print("#  expected: anthing but \(expected)")
         return false
     }
     /// ok if arrays are `actual` == `expected`
-    public func ne<T:Equatable>(actual:[T], _ expected:[T], _ message:String = "")->Bool {
+    public func ne<T:Equatable>(_ actual:[T], _ expected:[T], _ message:String = "")->Bool {
         if ok(actual != expected, message) { return true }
         print("#       got: \(actual)")
         print("#  expected: anthing but \(expected)")
         return false
     }
     /// ok if dictionaries are `actual` == `expected`
-    public func ne<K:Hashable,V:Equatable>(actual:[K:V], _ expected:[K:V], _ message:String = "")->Bool {
+    public func ne<K:Hashable,V:Equatable>(_ actual:[K:V], _ expected:[K:V], _ message:String = "")->Bool {
         if ok(actual != expected, message) { return true }
         print("#       got: \(actual)")
         print("#  expected: anthing but \(expected)")

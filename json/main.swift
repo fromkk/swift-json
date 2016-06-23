@@ -14,7 +14,7 @@ let obj:[String:AnyObject] = [
         "null":   JSON.null,
         "bool":   true,
         "int":    42,
-        "int64":  NSNumber(longLong: 2305843009213693951), // for 32-bit environment
+        "int64":  NSNumber(value: 2305843009213693951), // for 32-bit environment
         "double": 3.141592653589793,
         "string": "a α\t弾\nð",
         "array":  [],
