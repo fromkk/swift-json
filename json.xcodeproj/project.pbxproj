@@ -205,6 +205,8 @@
 				TargetAttributes = {
 					4DC40C411D0125E500FD0ACC = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = K84E4S7G4C;
+						DevelopmentTeamName = "Kazuya Ueoka";
 					};
 					4DC40C4A1D0125E500FD0ACC = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -413,6 +415,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -447,6 +450,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -474,6 +478,7 @@
 				4DC40C541D0125E500FD0ACC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4DC40C581D0125E500FD0ACC /* Build configuration list for PBXNativeTarget "swift-jsonTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +487,7 @@
 				4DC40C561D0125E500FD0ACC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9E66B56D19F5E3F30016A7C1 /* Build configuration list for PBXProject "json" */ = {
 			isa = XCConfigurationList;
